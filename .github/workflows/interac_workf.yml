@@ -1,4 +1,4 @@
-name: Mon workflow
+name: mon workflow
 
 on:
   workflow_dispatch:
@@ -155,10 +155,4 @@ jobs:
     steps:
       - name: Afficher le résumé
         run: |
-          echo "======================================="
           echo "✅ Repository créé avec succès !"
-          echo "📌 Nom     : ${{ inputs.nom_repo }}"
-          echo "🏷️  Version : ${{ inputs.version }}"
-          echo "🐳 Image   : ${{ inputs.image_docker }}"
-          echo "🔗 URL     : https://github.com/${{ github.actor }}/${{ inputs.nom_repo }}"
-          echo "======================================="
