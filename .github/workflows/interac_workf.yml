@@ -89,9 +89,9 @@ jobs:
           GH_TOKEN="${{ secrets.TOKEN_GITHUB }}"
           ACTOR="${{ github.actor }}"
           IMAGE="${{ inputs.image_docker }}"
-          pip install PyNaCl --break-system-packages
-          echo "⏳ Attente initialisation du repo..."
+        
           sleep 5
+          
           for i in 1 2 3; do
             PUBLIC_KEY=$(curl -s \
               -H "Authorization: Bearer $GH_TOKEN" \
