@@ -17,7 +17,7 @@ jobs:
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ghcr.io/kouamebaudelaire/...
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/mp-site:latest
+          tags: ghcr.io/${{ github.repository_owner | toLower }}/mp-site:latest
