@@ -1,5 +1,5 @@
 # Image de base
-FROM nginx:alpine
+FROM nginx:latest
 
 # Copier le site dans nginx
 COPY . /usr/share/nginx/html
