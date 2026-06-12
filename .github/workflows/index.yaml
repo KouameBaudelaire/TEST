@@ -19,6 +19,20 @@ jobs:
         with:
           persist-credentials: false
 
+          # 2. Installer Python 
+      - name: Set up Python 
+        uses: actions/setup-python@42375524c7a69c8c45b658e32d9d7c3b1f6f0f16 # v5 
+        with: 
+          python-version: "3.12" 
+          
+        # 3. Installer pre-commit 
+      - name: Install pre-commit 
+        run: pip install pre-commit 
+      
+      # 4. Exécuter les hooks pre-commit 
+      - name: Run pre-commit 
+        run: pre-commit run --all-files
+
   
       # 2. Se connecter à GitHub Container Registry
       - name: Login to GHCR
