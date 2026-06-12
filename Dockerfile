@@ -1,5 +1,5 @@
 # Image de base
-FROM nginx:latest
+FROM nginx:1.30.2-alpine
 
 #nettoyage du container
 RUN rm -rf /usr/share/nginx/html/*
